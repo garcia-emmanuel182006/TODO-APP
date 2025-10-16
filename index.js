@@ -40,7 +40,6 @@ function getTaskFromStorage () {
   }
 }
 
-
 // Handles the data and creates a tag container.
 function createHtmlList (title, content, id, date) {
   
@@ -86,7 +85,6 @@ function saveTasksOnStorage (savedTasks) {
   
   localStorage.setItem('savedTasks', stringifyTasks);
 }
-
 
 // Handles the task creation.
 function createTask (taskTitle, taskContent) {
@@ -148,5 +146,3 @@ appSubmitButton.addEventListener("click", (e) => {
   }
   createTask(appTitleInput.value, (appContentInput.value || "No content added."));
 });
-
-//i hope this works everywhere
