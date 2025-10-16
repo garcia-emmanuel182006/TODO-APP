@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<link rel="stylesheet" href="index.css">
+	<title>TODO APP</title>
+</head>
+<body>
+<main id="app-container">
+	<form id="app_form">
+		<label for="app_title"
+			   class="app-title_label">title</label>
+			
+		<input type="text"
+			   name="title"
+			   class="form_data"
+			   id="app_title">
+			
+		<label for="app_content"
+			   class="app-content_label">Content</label>
+
+		<textarea class="form_data"
+				  name="content"
+				  id="app_content"
+		></textarea>
+
+		<button id="app_submit" type="button">Create</button>
+	</form>
+	<ul id="app_list">
+	</ul>
+</main>
+</body>
+<script type="module" src="index.js"></script>
+</html>
