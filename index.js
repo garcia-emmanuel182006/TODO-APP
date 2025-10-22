@@ -89,17 +89,21 @@ function saveTasksOnStorage (savedTasks) {
 // Handles the task creation.
 function createTask (taskTitle, taskContent) {
   
+  //Handle empty input
+  if (appTitleInput.value === "" || appTitleInput.value == null) {
+    console.error("Could not create task. Title is empty.");
+    return;
+  }
+  
   // Create a unique ID based on the time the task is created.
   let taskID = Date.now().toString();
   let taskDateMade = new Date().toDateString();
   
-  let newTask = createHtmlList
-  (
+  let newTask = createHtmlList(
     taskTitle,
     taskContent,
     taskID,
-    taskDateMade,
-  );
+    taskDateMade);
   
   //Save tasks on a local map.
   savedTasks.set(
@@ -132,17 +136,11 @@ window.addEventListener('beforeunload', (e) => {
 window.addEventListener('keypress', (e) => {
   if (e.key === 'Enter') {
     e.preventDefault();
-    createTask(appTitleInput.value, appContentInput.value);
+    createTask(appTitleInput.value, (appContentInput.value || "No content added."));
   }
 });
 
 appSubmitButton.addEventListener("click", (e) => {
   e.preventDefault();
-  
-  //Handle empty input
-  if (appTitleInput.value === "") {
-    console.error("Could not create task. Title is empty.");
-    return;
-  }
   createTask(appTitleInput.value, (appContentInput.value || "No content added."));
 });
