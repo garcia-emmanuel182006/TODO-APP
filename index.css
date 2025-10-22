@@ -1,6 +1,82 @@
 :root {
   --backgroundColor: #070F2B;
-    --mainColor: #1B1A55;
-    --secondaryColor: #535C91;
-    --fontColor: #9290C3;
+  --mainColor: #1B1A55;
+  --secondaryColor: #535C91;
+  --fontColor: #f2f4f9;
+  --extraColor: #9290C3;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 5px;
+
+  font-size: 1.7em;
+  color: var(--fontColor);
+
+  background-color: var(--backgroundColor);
+}
+
+.header-container{
+  font-size: 1.3em;
+  display: flex;
+
+  flex-flow: column wrap;
+  align-content: center;
+  text-align: center;
+  margin: 10px auto ;
+}
+
+.header-container h1, .header-container p {
+  margin: 12px;
+}
+
+#app_form {
+  display: flex;
+  width: 60svw;
+  height: fit-content;
+  margin: auto;
+  flex-flow: column wrap;
+  align-content: center;
+  justify-content: flex-start;
+  padding: 6px;
+
+  background-color: var(--mainColor);
+  border-radius: 15px;
+}
+
+.form_data, .app-label {
+  width: 50%;
+}
+
+textarea {
+  resize: none;
+  overflow: visible;
+}
+
+#app_submit {
+  margin: 5px auto 0 auto;
+  width: 30%;
+  height: fit-content;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#app_submit, .form_data {
+  background: var(--secondaryColor);
+  color: var(--fontColor);
+
+  border: 2px solid var(--secondaryColor);
+  border-radius: 10px;
+
+  &:focus-visible {
+    outline: none;
+    border-color: var(--extraColor);
+  }
 }
