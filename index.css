@@ -50,12 +50,30 @@ body {
 }
 
 .form_data, .app-label {
-  width: 50%;
+  width: 80%;
+}
+.app-label {
+  width: fit-content;
+}
+
+#app_title {
+  font-size: 1em;
 }
 
 textarea {
   resize: none;
   overflow: visible;
+  font-size: .65em;
+
+  &::-webkit-scrollbar {
+    padding: 0;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--extraColor);
+    border-radius: 2px 10px 10px 2px ;
+    margin: 0;
+  }
+
 }
 
 #app_submit {
@@ -80,3 +98,29 @@ textarea {
     border-color: var(--extraColor);
   }
 }
+
+ul {
+  list-style: none;
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  background-color: var(--mainColor);
+  border-radius: 15px;
+
+}
+
+ul li {
+  text-align: left;
+  font-size: .9em;
+  flex-basis: 45%;
+  flex-grow: 1;
+  margin: 5px;
+  padding: 5px;
+  background-color: var(--secondaryColor);
+  border-radius: 15px;
+
+}
+
+/* THIS IS THE STYLE FOR THE LI ELEMENTS ADDED TO THE UL LIST FROM THE JAVASCRIPT FILE */
+

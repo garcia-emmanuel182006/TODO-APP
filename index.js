@@ -96,8 +96,9 @@ function createTask (taskTitle, taskContent) {
   }
   
   // Create a unique ID based on the time the task is created.
+  let date = new Date();
   let taskID = Date.now().toString();
-  let taskDateMade = new Date().toDateString();
+  let taskDateMade = `created on: ${date.toDateString()} at ${date.getHours()}:${date.getMinutes()}`;
   
   let newTask = createHtmlList(
     taskTitle,
