@@ -101,26 +101,59 @@ textarea {
 
 ul {
   list-style: none;
-  padding: 10px;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   background-color: var(--mainColor);
   border-radius: 15px;
 
 }
 
-ul li {
+
+/* THIS IS THE STYLE FOR THE LI ELEMENTS ADDED TO THE UL LIST FROM THE JAVASCRIPT FILE */
+
+.list-item {
+  flex-flow: column nowrap;
   text-align: left;
-  font-size: .9em;
-  flex-basis: 45%;
-  flex-grow: 1;
+  box-sizing: content-box;
+  width: 30%;
+  height: 450px;
   margin: 5px;
-  padding: 5px;
+  padding: 15px;
+
+  font-size: .9em;
+
   background-color: var(--secondaryColor);
   border-radius: 15px;
 
 }
 
-/* THIS IS THE STYLE FOR THE LI ELEMENTS ADDED TO THE UL LIST FROM THE JAVASCRIPT FILE */
+.task-title, .task-content {
+  display: block;
+  margin: 10px 0;
+}
 
+.task-title {
+  font-size: 1.2em;
+}
+
+.task-content {
+  font-size: .8em;
+  height: fit-content;
+  max-height: 45%;
+  overflow: clip;
+}
+
+.list-item-date_stamp {
+  font-size: .6em;
+}
+
+
+.delete-button {
+  background-color: var(--mainColor);
+  color: var(--fontColor);
+  border-radius: 15px;
+  border: 2px solid var(--mainColor);
+  width: 70px;
+  height: 40px;
+}
