@@ -1,0 +1,112 @@
+:root {
+  --backgroundColor: #070F2B;
+  --mainColor: #1B1A55;
+  --secondaryColor: #535C91;
+  --fontColor: #f2f4f9;
+  --extraColor: #9290C3;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--backgroundColor);
+  color: var(--fontColor);
+  margin: 0;
+  padding: 0;
+}
+
+.todo-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: var(--mainColor);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  overflow: hidden;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondaryColor);
+  padding: 1rem;
+}
+
+.header-container h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.add-task-btn {
+  background-color: var(--extraColor);
+  color: var(--fontColor);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.main-container {
+  padding: 1rem;
+}
+
+.task-input {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.task-input input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid var(--extraColor);
+  border-radius: 4px;
+  background-color: var(--backgroundColor);
+  color: var(--fontColor);
+}
+
+#app_save {
+  background-color: var(--extraColor);
+  color: var(--fontColor);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#app_list {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.task-item {
+  background-color: var(--secondaryColor);
+  padding: 0.75rem;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-item.completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  color: var(--extraColor);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.todo-left {
+  background-color: var(--secondaryColor);
+  padding: 0.75rem;
+  text-align: center;
+}
